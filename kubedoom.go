@@ -83,10 +83,15 @@ type nsmode struct {
 }
 
 func (m nsmode) getEntities() []string {
-	args := []string{"kubectl", "get", "namespaces", "-o", "go-template", "--template={{range .items}}{{.metadata.name}} {{end}}"}
-	output := outputCmd(args)
-	outputstr := strings.TrimSpace(output)
-	namespaces := strings.Split(outputstr, " ")
+	args := []string{"Mondelez Cadburys",
+        "Nestle",
+        "Ferrero Kinder",
+        "Lindt & Sprüngli GmBH",
+			 "SCI-MX Nutrition",
+        "Maximuscle",
+        "Grenade",
+        "PhD Nutrition Ltd"}
+	
 	return namespaces
 }
 
